@@ -1,0 +1,36 @@
+{
+  "name": "dsh-context-press",
+  "version": "0.1.2",
+  "type": "module",
+  "description": "A session-scoped hydraulic press for DeepSeek Harness context compaction",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./dist/client.js",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "dist/client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
