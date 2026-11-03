@@ -1,12 +1,13 @@
 {
   "name": "dsh-context-press",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "type": "module",
   "description": "A session-scoped hydraulic press for DeepSeek Harness context compaction",
   "exports": {
     ".": "./index.js",
     "./client": "./dist/client.js",
-    "./icon": "./icon.svg"
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
   },
   "files": [
     "index.js",
